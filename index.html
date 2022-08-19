@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Prueba</title>
+    
+    <!------------------Styles.css------------------->
+    <link rel="stylesheet" href="css/style.css">
+    <!-----------------Google Fonts------------------->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <!--------------------JQuery-------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+</head>
+<body>
+    <!-----Formulario---->
+    <form action="" class="form" id="form">
+        <h1 class="text-center"><img src="/img/Logo_Resuelve_tu_Deuda.png" alt="resuelve_tu_deuda" width="190px"></h1>
+        
+        <!----pasos---->
+        <div class="progressbar">
+            <div class="progress" id="progress"></div>
+            <div class="progress-step progress-step-active" data-title="Primer Paso"></div>
+            <div class="progress-step" data-title="Segundo Paso"></div>
+        </div>
+        <!------Formulario Paso 1------->
+        <div class="form-step form-step-active">
+            <div class="input-group">
+                <label for="instituciones"> Selecciona una Institución </label>
+                <select name="institucion" id="institucion" class="institucion">
+                    <option value="" disabled selected> Selecciona una Opción </option>
+                    <option value="Bancos"> Bancos </option>
+                    <option value="Tiendas"> Tiendas departamentales </option>
+                    <option value="Financieras"> Financieras </option>
+                </select>
+            </div>
+
+                <div class="input-group hidden" id="detail">
+                    <label for="bancos">Selecciona un Banco</label>
+                    <select name="bancos" id="bancos">
+                        <option value="" disabled selected> Selecciona una Opción </option>
+                        <option value="BBVA"> BBVA </option>
+                        <option value="Banamex"> Banamex</option>
+                        <option value="Santander"> Santander </option>
+                        <option value="HSBC"> HSBC </option>
+                    </select>
+                </div>
+                <div class="input-group hidden" id="detail1">
+                    <label for="tiendas">Selecciona una Tienda</label>
+                    <select name="tienda" id="tienda">
+                        <option value="" disabled selected> Selecciona una Opción </option>
+                        <option value="Sears"> Sears </option>
+                        <option value="Sanborns"> Sanborns</option>
+                        <option value="Liverpool"> Liverpool </option>
+                    </select>
+                </div>
+                <div class="input-group hidden" id="detail2">
+                    <label for="financiera">Selecciona una Fianciera</label>
+                    <select name="financiera" id="financiera">
+                        <option value="" disabled selected> Selecciona una Opción </option>
+                        <option value="Exitus"> Exitus Credit </option>
+                        <option value="Familiar"> Credito Familiar </option>
+                        <option value="Credomatic"> Credomatic </option>
+                    </select>
+                </div>
+
+            <div class="input-group">
+                <label for="monto">Monto de la deuda</label>
+                <select name="monto" id="monto">
+                    <option value="" hidden> Selecciona una Opción </option>
+                    <option value="6"> Más de $1,000,000 </option>
+                    <option value="5"> $500,000 - $1,000,000 </option>
+                    <option value="4"> $250,000 - $500,000 </option>
+                    <option value="3"> $100,000 - $250,000 </option>
+                    <option value="2"> $50,000 - $100,000 </option>
+                    <option value="1"> $35,000 - $50,000 </option>
+                </select>
+            </div>
+            <div class="">
+                <a href="#" class="btn btn-next width-50 ml-auto">Siguiente</a>
+            </div>
+        </div>
+
+        <!------Formulario Paso 2------->
+        <div class="form-step">
+            <div class="input-group">
+                <label for="nombre"> Nombre </label>
+                <input type="text" name="nombre" id="nombre" required pattern="[A-Za-z].{2,}">
+            </div>
+            <div class="input-group">
+                <label for="apellidop"> Apellido Paterno </label>
+                <input type="text" name="apellidop" id="apellidop" required pattern="[A-Za-z].{2,}">
+            </div>
+            <div class="input-group">
+                <label for="apellidom"> Apellido Materno </label>
+                <input type="text" name="apellidom" id="apellidom" required pattern="[A-Za-z].{2,}">
+            </div>
+            <div class="input-group">
+                <label for="tel"> Teléfono </label>
+                <input type="tel" name="tel" id="tel" required="" pattern="[0-9]+{10}">
+            </div>
+            <div class="input-group">
+                <label for="correo"> Correo eléctronico </label>
+                <input type="email" name="correo" id="correo" required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            </div>
+            <div class="input-group">
+                <label for="rfc"> RFC </label>
+                <input type="text" name="rfc" id="rfc" required pattern="[A-ZÑ&]{3,4}) ?(?:- ?)?(\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])) ?(?:- ?)?([A-Z\d]{2})([A\d]">
+            </div>
+            <div class="btns-group">
+                <a href="#" class="btn btn-prev">Anterior</a>
+                <input type="submit" value="Enviar" onclick ="validar();store();"class="btn">            
+            </div>
+        </div>
+    </form>
+   
+</body>
+    <!------------------Script.js-------------------->
+    <script src="/js/script.js"></script>
+</html>
