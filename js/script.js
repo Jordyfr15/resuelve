@@ -128,52 +128,8 @@ function validar(){
     alert("Se envío la información de manera correcta")
 }
 
-
-function validacion(){
-
-    var nom = document.getElementById("nombre").value;
-    var apellidop = document.getElementById("apellidop").value;
-    var apellidom = document.getElementById("apeelidom").value;
-    var tel = document.getElementById("tel").value;
-    var correo = document.getElementById("correo").value;
-    var rfc = document.getElementById("rfc").value;
-
-    if (nom == "") {
-        alert("Por favor, ingresa tu nombre")
-        return false;
-    }
-    if (apellidop == "") {
-        alert("Por favor, ingresa tus apellidos")
-
-        return false;
-    }
-    if (apellidom == "") {
-        alert("Por favor, ingresa tus apellidos")
-
-        return false;
-    }
-    if (tel.length != 10) {
-        alert("Ingresa tu teléfono a 10 digitos")
-
-        return false;
-    }
-    if (correo == "") {
-        alert("Por favor, ingresa tu correo electrónico")
-
-        return false;
-    }
-
-    if (rfc == "") {
-        alert("Por favor, ingresa tu correo electrónico")
-
-        return false;
-    }
-
-    return true;
-
-}
-
-
+//Realicé la validación de los campos normales con html y con algunas expresiones regulares, también lo puedo 
+//hacer con Javascript, Query 
 
 //localstorage
 
